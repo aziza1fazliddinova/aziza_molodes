@@ -45,9 +45,27 @@ function fibonachi (k){
     a.push(next);
   }
   return a
-} 
-
+}
 let num = prompt("Введите число:")
-let b = fibonachi(num);
-console.log( b );
+let b = fibonachi(num)
+console.log( b )
 
+
+function sort(arr) {
+    let sorted = false
+    
+    while (!sorted) {
+      sorted = true
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i + 1]) {
+          [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+          sorted = false
+        }
+      }
+    }
+    return arr
+  }
+  
+  let numbers = [5, 2, 8, 1, 9 , 33]
+  console.log(sort(numbers))
+  
